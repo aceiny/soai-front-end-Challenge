@@ -1,5 +1,18 @@
 ### this is a front end for the soai front end challange (responsive challange)
 
+## Installation
+
+```bash
+$ npm install
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run dev
+```
+
 ```bash
 ## the website if fully responsive 
 ## supports dark mode 
