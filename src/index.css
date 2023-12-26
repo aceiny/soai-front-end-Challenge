@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: all 1s ease-in-out;
+  
+}
+.fast-transition{
+  transition: all 0.3s ease-in-out;
+}
+.helf-transition{
+  transition: all 0.6s ease-in-out;
+}
+.special-top {
+  position: relative;
+}
+
+.special-top {
+  position: relative;
+}
+
+.special-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/top-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-position-y: top;
+  background-clip: border-box;
+  transform-origin: center center;
+  animation: rotateAnimation 10s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (width < 1480px) {
+  .AboutUsCard{
+    gap: 20px;
+  }
+  .AboutUsCard article h1{
+    font-size: 38px;
+  }
+  .AboutUsCard article p{
+    font-size: 24px;
+  }
+  #about-us{
+    padding-left:  50px;
+    padding-right: 50px;
+  }
+  #about-us div{
+    padding-left:  20px;
+    padding-right: 20px;
+  }
+  .Footer div{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (width < 1250px) {
+  .Footer .footer-right{
+    gap: 30px;
+  }
+}
+@media (width < 985px) {
+  .AboutUsCard article h1{
+    font-size: 26px;
+  }
+  .AboutUsCard article p{
+    font-size: 16px;
+  }
+}
+.navbar-toggle{
+  display: none;
+}
+.navbarMainNavs{
+  display: flex;
+  gap: 20px;
+}
+.navbarSecNavs{
+  display: none;
+ 
+}
+@media (width < 900px) {
+  .navbar-toggle{
+    display: block;
+  }
+  .navbarSecNavs{
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #262626;
+    flex-direction: column;
+
+    gap: 20px;
+    height: 100vh;
+    padding: 80px;
+    align-items: center;
+    
+  }
+  .NavBar{
+    padding: 40px 15%;
+  }
+  .navbarMainNavs{
+    display: none;
+  }
+  .AboutUsCard{
+    flex-direction: column;
+    gap: 20px;
+  }
+  #about-us div{
+    padding-left:  20px;
+    padding-right: 20px;
+  }
+  .AboutUsCard article h1{
+    font-size: 38px;
+  }
+  .AboutUsCard article p{
+    font-size: 24px;
+  }
+  .Footer div{
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+  .Footer .footer-right{
+    gap: 60px;
+  }
+}
+@media (width < 768px) {
+  .LandingHeaderContentTitle{
+    font-size: 50px;
+  }
+  .LandingHeaderContentText{
+    font-size: 22px;
+  }
+  .AboutUsCard img{
+    min-width: 350px;
+
+  }
+  #about-us{
+      padding: 0 20px;
+  }
+  #about-us div{
+    padding: 0 10px;
+  }
+  
+}
+@media (width < 590px) {
+  .LandingHeaderContentTitle{
+    font-size: 36px;
+  }
+  .LandingHeaderContentText{
+    font-size: 20px;
+  }
+  .CourseCard{
+    width: 320px
+  }
+  .AboutUsCard article h1{
+    font-size: 24px;
+  }
+  .AboutUsCard article p{
+    font-size: 18px;
+  }
+}
+@media (width < 360px) {
+  .LandingHeaderContentTitle{
+    font-size: 28px;
+  }
+  .LandingHeaderContentText{
+    font-size: 16px;
+  }
+  .CourseCard{
+    width: 260px
+  }
+  .CourseCard article h1{
+    font-size: 18px;
+  }
+}
+/*Dark mode*/
+body.dark-mode {
+  background-color: #171717;
+}
+body.dark-mode .CourseCard{
+  border:  1px solid #737373;
+  background-color: #262626;
+}
+body.dark-mode .CourseCardTitle , body.dark-mode .CourseCardDur p , body.dark-mode .CourseCardDur .icon{
+  color: #fafafa;
+}
+body.dark-mode .CourseCardBy , body.dark-mode  .CourseCardDis{
+  color: #A3A3A3
+}
+body.dark-mode .CourseCard button{
+  background-color: #DDD6FE;
+  color: #4C1D95;
+}
+body.dark-mode .LandingHeaderContentTitle{
+  color: #f5f5f5;
+}
+
+body.dark-mode .LandingHeaderContentText , body.dark-mode #about-us div article p{
+  color: #A3A3A3;
+}
+body.dark-mode .navbar-navs , body.dark-mode #about-us div article h1{
+  color: #fafafa;
+}
+body.dark-mode .NavBar nav button{
+  background-color: #DDD6FE;
+  color: #4C1D95;
+}
+body.dark-mode .LandingHeaderContent button{
+  background-color: #DDD6FE;
+  color: #4C1D95;
+}
+body.dark-mode .LandingHeaderContent .lastOne{
+  color: #DDD6FE;
+}
+body.dark-mode #about-us ,body.dark-mode  #about-us div{
+  background-color: #262626;
+
+}
+body.dark-mode .footer-right div h1 , body.dark-mode .footer-right div div a{
+  color: #fafafa;
+}
+body.dark-mode .ModeSwitcher .toggle{
+  background-color: #262626;
+  color:  white;
+  border: 1px solid #737373;
+}
+.ModeSwitcher .toggle{ 
+  border : 1px solid #E5E5E5;
+  transition: all 1s ease-in-out; 
+}
+body.dark-mode .navbar-toggle-special{
+  color: white;
+}

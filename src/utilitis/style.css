@@ -1,0 +1,38 @@
+.toggle {
+    background-color: white;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .1);
+    line-height: 1;
+  }
+  
+  .input {
+    display: none;
+  }
+  
+  .icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+  }
+  
+  .icon--moon {
+    transform: scale(0);
+    
+  }
+  
+  .icon--sun {
+    transition-delay: 200ms;
+  }
+  #switch:checked ~ .icon--sun {
+    transform: rotate(360deg) scale(0);
+  }
+  
+  #switch:checked + .icon--moon {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+  }
