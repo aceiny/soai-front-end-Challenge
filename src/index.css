@@ -38,10 +38,9 @@ body{
   background: url(./assets/top-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  background-position-y: top;
+  background-size: contain/cover;
   background-clip: border-box;
-  transform-origin: center center;
+  transform-origin: center;
   animation: rotateAnimation 10s linear infinite;
 }
 
@@ -147,6 +146,9 @@ body{
   }
 }
 @media (width < 768px) {
+  .special-top::before {
+    background-size: cover;
+  }
   .LandingHeaderContentTitle{
     font-size: 50px;
   }
