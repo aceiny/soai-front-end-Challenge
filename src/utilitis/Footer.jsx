@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.svg'
+import logo from '../assets/LOGO.svg'
 import instagram from '../assets/instagram.svg'
 import linkedin from '../assets/linkedin.svg'
 const Footer = () => {
